@@ -4,7 +4,6 @@ const router = express.Router();
 const schema = require("../../config/schema");
 router.post("/", (req, res) => {
   const longUrl  = req.body.abc;
-  // res.send(req.body.abc);
   var shortUrl='';
   var flag = true;
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -25,8 +24,7 @@ router.post("/", (req, res) => {
         schemaUpload.save()
         flag=false;
     }
-  // req.body.abc
-// window.alert("The short URL is:"+shortUrl);
+
   console.log(shortUrl)
   res.send(shortUrl);
   console.log(req.body);

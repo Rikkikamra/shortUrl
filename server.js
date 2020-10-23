@@ -11,16 +11,9 @@ app.use(cors());
 
 app.use(express.json());
 
-// app.use("/", retrive);
-// window.location = collect;
-// collect = collect.str();
-// app.use(express.static(String(collect)));
 app.use("/api/submit", submit);
 app.use("/",retrive);
 
-// function hello(){
-//   console.log("test");
-// }
 
 const port = process.env.PORT || 5000;
 app.use(express.static("./"));
